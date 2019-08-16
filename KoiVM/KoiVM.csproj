@@ -17,7 +17,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Debug\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,7 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Confuser.DynCipher">
-      <HintPath>..\..\Confuser2\Release\bin\Confuser.DynCipher.dll</HintPath>
+      <HintPath>..\Debug\bin\Confuser.DynCipher.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -120,7 +120,6 @@
     <Compile Include="MethodVirtualizer.cs" />
     <Compile Include="Obfuscation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Protections\Dummy\DummyIRTransform.cs" />
     <Compile Include="Protections\SMC\SMCBlock.cs" />
     <Compile Include="Protections\SMC\SMCILTransform.cs" />
     <Compile Include="Protections\SMC\SMCIRTransform.cs" />

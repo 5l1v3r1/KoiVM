@@ -1,15 +1,12 @@
 ﻿using System.Reflection;
 
-[assembly: AssemblyProduct("KoiVM")]
+[assembly: AssemblyProduct("ConfuserEx")]
 [assembly: AssemblyCompany("Ki")]
 [assembly: AssemblyCopyright("Copyright (C) Ki 2014")]
 
 #if DEBUG
 
 [assembly: AssemblyConfiguration("Debug")]
-#elif __TRACE
-
-[assembly: AssemblyConfiguration("Trace")]
 #else
 
 [assembly: AssemblyConfiguration("Release")]

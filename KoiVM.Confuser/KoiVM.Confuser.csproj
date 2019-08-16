@@ -44,15 +44,17 @@
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Confuser.Core">
-      <HintPath>..\..\Confuser2\Release\bin\Confuser.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Confuser.Protections">
-      <HintPath>..\..\Confuser2\Release\bin\Confuser.Protections.dll</HintPath>
-    </Reference>
-    <Reference Include="Confuser.Renamer, Version=0.6.0.50, Culture=neutral, PublicKeyToken=5fbc98a9d8494c64, processorArchitecture=MSIL">
+    <Reference Include="Confuser.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5fbc98a9d8494c64, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Confuser2\Release\bin\Confuser.Renamer.dll</HintPath>
+      <HintPath>..\Debug\bin\Confuser.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Confuser.Protections, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5fbc98a9d8494c64, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\bin\Confuser.Protections.dll</HintPath>
+    </Reference>
+    <Reference Include="Confuser.Renamer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5fbc98a9d8494c64, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\bin\Confuser.Renamer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -116,6 +118,9 @@
       <Project>{9E333771-BC67-4120-9C67-D15311C0F67C}</Project>
       <Name>KoiVM</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\Debug\bin\Confuser.Protections.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

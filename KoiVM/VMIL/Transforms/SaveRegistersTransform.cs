@@ -32,9 +32,15 @@ namespace KoiVM.VMIL.Transforms {
 
 			var saving = new HashSet<VMRegisters>(saveRegs);
 			var retVar = (IRVariable)callInfo.ReturnValue;
-			// R0 = return register, need to save if retVar register is not R0
-			Debug.Assert(!(retVar == null ^ (callInfo.ReturnRegister == null ^ callInfo.ReturnSlot == null)));
-			if (retVar != null) {
+            // R0 = return register, need to save if retVar register is not R07
+            if (retVar == null ^ (callInfo.ReturnRegister == null ^ callInfo.ReturnSlot == null)) {
+                ConsoleColor c = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Debug.Assert [SaveRegistersTransform.cs] L36");
+                Console.WriteLine($"Method target->{callInfo.Method.FullName}");
+                Console.ForegroundColor = c;
+            }
+            if (retVar != null) {
 				if (callInfo.ReturnSlot == null) {
 					var retReg = callInfo.ReturnRegister.Register;
 					saving.Remove(retReg);

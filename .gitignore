@@ -28,6 +28,15 @@ obj/
 _ReSharper*/
 [Tt]est[Rr]esult*
 
-users*.lst
+!packages/*/build/
+packages/
+/Confuser.Test
+*.sln.*
+gh-pages/
 GlobalAssemblyInfo.cs
-Temp/
+/Build/*.zip
+!Build/7z.exe
+.vs/Confuser2/v15/Server/sqlite3/db.lock
+.vs/Confuser2/v15/Server/sqlite3/storage.ide-shm
+.vs/Confuser2/v15/Server/sqlite3/storage.ide
+.vs/Confuser2/v15/Server/sqlite3/storage.ide-wal
